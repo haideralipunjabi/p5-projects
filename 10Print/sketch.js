@@ -8,7 +8,7 @@ let printerSelecter;
 let colorize = false;
 function setup()
 {
-  createCanvas(windowWidth,windowHeight);
+  setupDocumentation('10Print');
   background(0);
   printers.push(
     ["Morse Print", "morsePrint"],
@@ -26,15 +26,16 @@ function setup()
   colorize = ((getURLParams().colorize === "true") ? true : false);
 }
 function changePrinter() {
-  window.location.href = '?printer=' + printers[printerSelecter.elt.selectedIndex][1] + '&colorize=' + colorize.toString();
+  
+  window.location.href = '?fullscreen='+getURLParams().fullscreen + '&printer=' + printers[printerSelecter.elt.selectedIndex][1] + '&colorize=' + colorize.toString();
 }
 
 
 function draw()
 {
-  if(Object.keys(getURLParams()).length > 0) eval(getURLParams().printer)();
+  if(Object.keys(getURLParams()).length > 1) eval(getURLParams().printer)();
   else {
-    window.location.href = '?printer=' + printers[floor(random(printers.length))][1] + '&colorize=true';
+    window.location.href = '?fullscreen='+getURLParams().fullscreen + '&printer=' + printers[floor(random(printers.length))][1] + '&colorize=true';
       
   }
 }

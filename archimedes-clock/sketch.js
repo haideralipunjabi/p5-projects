@@ -6,7 +6,7 @@ let th = 0;
 let hr,mn;
 function setup()
 {
-  createCanvas(windowWidth,windowHeight);
+  setupDocumentation('archimedes-clock');
   angleMode(DEGREES);
   r = windowHeight /5;
 }
@@ -14,8 +14,6 @@ function setup()
 function draw()
 {
   background(255);
-  createElement('h1',"Archimedes Clock").position(20,20);
-  createP("Instructions: The number through which the curve passes is the hour, the small hand points towards the minute as in a normal clock.").position(20,80);
   noFill();
   translate(windowWidth/2,windowHeight/2);
   checkTime();

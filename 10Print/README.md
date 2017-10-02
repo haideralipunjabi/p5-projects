@@ -1,5 +1,5 @@
 # 10Print  
-Inspired by @shiffman his [Coding Challenge #76](https://github.com/CodingTrain/Rainbow-Code/tree/master/CodingChallenges/CC_76_10PRINT)
+Inspired by @shiffman and his [Coding Challenge #76](https://github.com/CodingTrain/Rainbow-Code/tree/master/CodingChallenges/CC_76_10PRINT)
 
 ## Morse Print 
 Prints dots and dashes  

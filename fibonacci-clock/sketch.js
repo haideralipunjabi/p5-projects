@@ -7,7 +7,9 @@ let bgColor,mnColor,hrColor,dualcolor,colors;
 let palleteSelector;
 function setup()
 {
-  createCanvas(windowWidth,windowHeight);
+  setupDocumentation('fibonacci-clock');
+  
+
   wWidth = windowWidth - 1000;
   ratio = wWidth / 8;
   wHeight = ratio * 5;
@@ -20,7 +22,6 @@ function setup()
   }
   setPallete();
   palleteSelector.changed(changePallete);
-  createElement("h1","Fibonacci Clock Simulation").position(500, 100)
   createP("Hour Color:").position(20,120);
   createP("Minute Color: ").position(20, 180);
   createP("Dual Color: ").position(20, 240);
@@ -28,6 +29,7 @@ function setup()
 }
 function draw()
 {
+  
   checkTime();
   background(bgColor);
   stroke(0);
@@ -39,7 +41,7 @@ function draw()
     fill(dualcolor);
     rect(150, 255, 20,20);
   pop();
-  translate(500,(windowHeight - wHeight)/2)
+  translate( 500, (windowHeight - wHeight)/2)
   rect(0, 0, wWidth, wHeight);
   fill(colors[0]);
   rect(ratio*2,0, ratio, ratio); 
